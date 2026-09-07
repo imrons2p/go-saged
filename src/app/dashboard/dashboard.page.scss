@@ -1,0 +1,128 @@
+.bg-light {
+    --background: #f8f9fc;
+}
+
+// Header styling
+.logo-text {
+    color: #1a237e;
+    font-size: 1.1rem;
+
+    small {
+        font-size: 0.6rem;
+        color: #666;
+        letter-spacing: 1px;
+    }
+}
+
+.notification-btn {
+    position: relative;
+
+    .badge-dot {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 8px;
+        height: 8px;
+        background-color: #ff3b30;
+        border-radius: 50%;
+    }
+}
+
+// Menu Grid Cards
+.menu-card {
+    margin: 6px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    background: #ffffff;
+
+    ion-card-content {
+        padding: 16px 8px;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+        color: #2b4c7e;
+    }
+
+    .menu-label {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        color: #555555;
+        font-weight: 500;
+    }
+}
+
+
+
+// Banner styling
+.banner-swiper {
+    width: 100%;
+    padding-bottom: 22px;
+    /* Ruang untuk titik pagination di bawah */
+
+    --swiper-pagination-color: #0083b0;
+    --swiper-pagination-bullet-inactive-color: #cccccc;
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+
+.banner-card {
+    margin: 4px;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 225px;
+
+    .banner-subtitle {
+        font-size: 1.05rem;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+    }
+
+    .banner-desc {
+        font-size: 0.75rem;
+        opacity: 0.9;
+        margin: 0 0 12px 0;
+    }
+
+    .btn-banner {
+        --color: #1a237e;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+
+    .banner-icon-graphic {
+        font-size: 48px;
+        opacity: 0.85;
+    }
+}
+
+// Bottom Action Cards
+.action-card {
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+    .action-icon {
+        font-size: 32px;
+    }
+
+    .action-label {
+        margin: 4px 0 0 0;
+        font-size: 0.85rem;
+        color: #444;
+        font-weight: 500;
+    }
+}
+
+// Tab Bar Styling
+ion-tab-bar {
+    --background: #0d253f;
+    --color-selected: #ffffff;
+    --color: #8da4c4;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}

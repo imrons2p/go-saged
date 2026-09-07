@@ -1,0 +1,110 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">
+      <div class="logo-container">
+        <span class="logo-text"><strong>SAGED</strong> <br><small>Sistem Aplikasi Gudang Elektronik Digital</small></span>
+      </div>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button class="notification-btn">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        <span class="badge-dot"></span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding bg-light">
+
+    <!-- Banner Swiper Carousel -->
+<swiper-container 
+  [slidesPerView]="1" 
+  [spaceBetween]="10" 
+  [pagination]="true" 
+  [autoplay]="{ delay: 3500 }" 
+  class="banner-swiper">
+  
+  <swiper-slide *ngFor="let banner of banners">
+    <div class="banner-card" [style.background]="banner.bgGradient">
+      <div class="banner-content">
+        <p class="banner-subtitle">{{ banner.title }}</p>
+        <p class="banner-desc">{{ banner.desc }}</p>
+        <ion-button size="small" shape="round" color="light" class="btn-banner">
+          {{ banner.btnText }}
+        </ion-button>
+      </div>
+      <div class="card-preview">
+        <ion-icon [name]="banner.icon" class="banner-icon-graphic"></ion-icon>
+      </div>
+    </div>
+  </swiper-slide>
+  
+</swiper-container>
+
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="4" *ngFor="let item of mainMenus">
+        <ion-card class="menu-card ion-activatable ripple-parent">
+          <ion-ripple-effect></ion-ripple-effect>
+          <ion-card-content class="ion-text-center">
+            <ion-icon [name]="item.icon" class="menu-icon"></ion-icon>
+            <p class="menu-label">{{ item.title }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-row class="ion-margin-top">
+    <ion-col size="6">
+      <ion-card class="action-card ion-activatable ripple-parent">
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="refresh-circle-outline" color="success" class="action-icon"></ion-icon>
+          <p class="action-label">Give us Feedback</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="action-card ion-activatable ripple-parent">
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-card-content class="ion-text-center">
+          <ion-icon name="help-circle-outline" color="warning" class="action-icon"></ion-icon>
+          <p class="action-label">Need Help?</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<ion-tab-bar slot="bottom" color="primary">
+  <ion-tab-button tab="home" selected>
+    <ion-icon name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="invoice">
+    <ion-icon name="receipt-outline"></ion-icon>
+    <ion-label>Invoice</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="stock">
+    <ion-icon name="grid-outline"></ion-icon>
+    <ion-label>Stock</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="reports">
+    <ion-icon name="bar-chart-outline"></ion-icon>
+    <ion-label>Reports</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
