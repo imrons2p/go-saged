@@ -1,0 +1,7 @@
+{
+  "name": "go-saged",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
