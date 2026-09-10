@@ -11,10 +11,10 @@ import {
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import {
-  menuOutline, notificationsOutline, gridOutline, receiptOutline,
-  documentAttachOutline, listOutline, documentTextOutline,
-  peopleOutline, settingsOutline, barChartOutline, cartOutline,
-  refreshCircleOutline, helpCircleOutline, home, cardOutline, giftOutline
+  menuOutline, notificationsOutline, gridOutline, pricetagOutline,
+  businessOutline, readerOutline, locationOutline, briefcaseOutline, constructOutline,
+  swapVerticalOutline, swapHorizontalOutline, barChartOutline, documentsOutline,
+  refreshCircleOutline, helpCircleOutline, home, cardOutline, giftOutline, personCircleOutline
 } from 'ionicons/icons';
 
 interface BannerItem {
@@ -59,23 +59,22 @@ export class DashboardPage implements OnInit {
   ];
 
   mainMenus = [
-    { title: 'Product', icon: 'grid-outline', routerLink: 'pm' },
-    { title: 'Purchase', icon: 'receipt-outline' },
-    { title: 'Sales', icon: 'document-attach-outline' },
-    { title: 'Voucher', icon: 'list-outline' },
-    { title: 'Quotation', icon: 'document-text-outline' },
-    { title: 'Users', icon: 'people-outline' },
-    { title: 'Settings', icon: 'settings-outline' },
-    { title: 'Reports', icon: 'bar-chart-outline' },
-    { title: 'Pos Sale', icon: 'cart-outline' }
+    { title: 'Items', icon: 'grid-outline' },
+    { title: 'Categories', icon: 'pricetag-outline' },
+    { title: 'Locations', icon: 'location-outline' },
+    { title: 'Units', icon: 'business-outline' },
+    { title: 'Assets', icon: 'reader-outline' },
+    { title: 'Transactions', icon: 'swap-vertical-outline' },
+    { title: 'Transfer', icon: 'swap-horizontal-outline' },
+    { title: 'Reports', icon: 'documents-outline' }
   ];
 
   constructor() {
     addIcons({
-      menuOutline, notificationsOutline, gridOutline, receiptOutline,
-      documentAttachOutline, listOutline, documentTextOutline,
-      peopleOutline, settingsOutline, barChartOutline, cartOutline,
-      refreshCircleOutline, helpCircleOutline, home, cardOutline, giftOutline
+      menuOutline, notificationsOutline, gridOutline, pricetagOutline,
+      businessOutline, readerOutline, locationOutline, briefcaseOutline, constructOutline,
+      swapVerticalOutline, swapHorizontalOutline, barChartOutline, documentsOutline,
+      refreshCircleOutline, helpCircleOutline, home, cardOutline, giftOutline, personCircleOutline
     });
   }
 
